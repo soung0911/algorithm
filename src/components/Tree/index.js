@@ -30,14 +30,20 @@ function Tree({ list }) {
       {list.map((site, sitekey) => {
         return (
           <Item key={sitekey}>
-            <SLink to={site.path === 'home' ? '/' : `/site/${site.path}`}>
+            <SLink
+              to={
+                site.path === 'home'
+                  ? '/algorithm'
+                  : `/algorithm/site/${site.path}`
+              }
+            >
               {site.title}
             </SLink>
             <List>
               {site.item_list.map((item, itemkey) => {
                 return (
                   <Item key={itemkey}>
-                    <SLink to={`/problem/${site.path}/${item.title}`}>
+                    <SLink to={`/algorithm/problem/${site.path}/${item.title}`}>
                       {item.title}
                     </SLink>
                   </Item>
