@@ -1,2 +1,0 @@
-(this.webpackJsonpalgorithm=this.webpackJsonpalgorithm||[]).push([[0],{3:function(e,t,n){e.exports=n(8)},8:function(e,t,n){"use strict";n.r(t);var r=n(0),a=n.n(r),o=n(2);var i=function(){return a.a.createElement("div",{className:"App"},"algorithm site.")};n.n(o).a.render(a.a.createElement(i,null),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.36e09c1c.chunk.js.map
