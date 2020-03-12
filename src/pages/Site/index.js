@@ -22,7 +22,11 @@ function Site(props) {
     getData();
   }, [props]);
 
-  return <ReactMarkdown source={text} />;
+  return (
+    <div class="markdown-body">
+      <ReactMarkdown source={text} />
+    </div>
+  );
 }
 
 export default Site;

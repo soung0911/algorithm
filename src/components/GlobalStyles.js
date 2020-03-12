@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import '../../node_modules/github-markdown-css/github-markdown.css';
 
 export default createGlobalStyle`
 	${normalize};
