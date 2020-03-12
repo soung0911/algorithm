@@ -8,6 +8,6 @@ export default [
   {
     title: 'baekjoon',
     path: 'baekjoon',
-    item_list: []
+    item_list: [{ title: '3' }, { title: '4' }]
   }
 ];

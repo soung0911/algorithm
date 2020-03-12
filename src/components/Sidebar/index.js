@@ -24,7 +24,9 @@ function Sidebar() {
   return (
     <Container>
       <Navigation>
-        <Tree list={sidebar} />
+        {sidebar.map((list, listkey) => {
+          return <Tree key={listkey} list={list} />;
+        })}
       </Navigation>
     </Container>
   );
