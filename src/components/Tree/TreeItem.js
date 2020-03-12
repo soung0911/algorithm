@@ -14,7 +14,10 @@ function TreeItem({ site }) {
       {site.item_list.map((item, itemkey) => {
         return (
           <Item key={itemkey}>
-            <SLink to={`/algorithm/problem/${site.path}/${item.title}`}>
+            <SLink
+              to={`/algorithm/problem/${site.path}/
+							${item.title.replace(/(\s*)/g, '')}`}
+            >
               {item.title}
             </SLink>
           </Item>

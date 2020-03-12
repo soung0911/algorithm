@@ -12,13 +12,13 @@ function Problem(props) {
 
   useEffect(() => {
     const getData = async () => {
-      await fetch(require(`../../posts/${path}/${title}_p.md`)).then(
-        response => {
-          response.text().then(text => {
-            setText(text);
-          });
-        }
-      );
+      await fetch(
+        require(`../../posts/${path}/${title.replace(/(\s*)/g, '')}_p.md`)
+      ).then(response => {
+        response.text().then(text => {
+          setText(text);
+        });
+      });
     };
 
     getData();
