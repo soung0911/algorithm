@@ -23,7 +23,7 @@ function Site(props) {
   }, [props]);
 
   return (
-    <div class="markdown-body">
+    <div className="markdown-body">
       <ReactMarkdown source={text} />
     </div>
   );

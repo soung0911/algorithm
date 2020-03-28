@@ -2,28 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const List = styled.div``;
-
-const Item = styled.div``;
-
-const SLink = styled(Link)``;
+const Item = styled.div`
+  border: 1px solid transparent;
+  padding: 7px 24px 7px 16px;
+`;
 
 function TreeItem({ site }) {
   return (
-    <List>
+    <>
       {site.item_list.map((item, itemkey) => {
         return (
           <Item key={itemkey}>
-            <SLink
-              to={`/algorithm/problem/${site.path}/
-							${item.title.replace(/(\s*)/g, '')}`}
+            <Link
+              to={`/problem/${site.path}/
+							${item.title}`}
             >
               {item.title}
-            </SLink>
+            </Link>
           </Item>
         );
       })}
-    </List>
+    </>
   );
 }
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import { Home, Problem, Site } from 'pages';
 
 export default () => (
-  <>
-    <Route path="/algorithm" exact component={Home} />
-    <Route path="/algorithm/site/:title" exact component={Site} />
-    <Route path="/algorithm/problem/:path/:title" component={Problem} />
-    <Redirect from="*" to="/algorithm" />
-  </>
+  <Switch>
+    <Route path="/" exact component={Home} />
+    <Route path="/site/:title" component={Site} />
+    <Route path="/problem/:path/:title" component={Problem} />
+    <Redirect from="*" to="/" />
+  </Switch>
 );

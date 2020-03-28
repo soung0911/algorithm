@@ -16,7 +16,11 @@ function Home() {
     getData();
   }, []);
 
-  return <ReactMarkdown source={text} />;
+  return (
+    <div className="markdown-body">
+      <ReactMarkdown source={text} />
+    </div>
+  );
 }
 
 export default Home;

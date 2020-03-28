@@ -11,8 +11,8 @@ const Container = styled.div`
   overflow-y: auto;
   width: 300px;
   color: #364149;
-  background: #fafafa;
-  border-right: 1px solid rgba(0, 0, 0, 0.07);
+  background: #f5f7f9;
+  border-right: 1px solid #e6ecf1;
   transition: left 250ms ease;
 `;
 
@@ -24,8 +24,8 @@ function Sidebar() {
   return (
     <Container>
       <Navigation>
-        {sidebar.map((list, listkey) => {
-          return <Tree key={listkey} list={list} />;
+        {sidebar.map((list, key) => {
+          return <Tree key={key} list={list} />;
         })}
       </Navigation>
     </Container>
