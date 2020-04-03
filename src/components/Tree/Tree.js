@@ -71,29 +71,35 @@ function Tree({ list, location: { pathname } }) {
 
   const path = list.path === 'home' ? '/' : `/site/${list.path}`;
 
+  const currentFlag = pathname === path ? 1 : 0;
+
   return (
     <List>
-      <Item current={pathname === path ? 1 : 0}>
-        <ItemLink to={path} current={pathname === path ? 1 : 0} replace>
+      <Item current={currentFlag}>
+        <ItemLink to={path} current={currentFlag} replace>
           <ItemText>{list.title}</ItemText>
-          <Arrow onClick={toggleHandler} toggle={toggle}>
-            <span>
-              <svg
-                height="1em"
-                width="1em"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                stroke="currentColor"
-              >
-                <g>
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </g>
-              </svg>
-            </span>
-          </Arrow>
+          {path === '/' ? (
+            ''
+          ) : (
+            <Arrow onClick={toggleHandler} toggle={toggle}>
+              <span>
+                <svg
+                  height="1em"
+                  width="1em"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  stroke="currentColor"
+                >
+                  <g>
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </g>
+                </svg>
+              </span>
+            </Arrow>
+          )}
         </ItemLink>
       </Item>
       <ItemList toggle={toggle}>
