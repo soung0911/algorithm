@@ -6,7 +6,7 @@
 ```
 먼저 오른쪽 절반을 왼쪽으로 접습니다.
 ```
-![paper_2](./assets/images/paper_2.png)
+![paper_2](./#/assets/images/paper_2.png)
 ```
 다시 오른쪽 절반을 왼쪽으로 접습니다.
 ```
