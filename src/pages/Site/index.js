@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Api } from '../../api';
 
 function Site(props) {
   const {
@@ -12,11 +13,7 @@ function Site(props) {
 
   useEffect(() => {
     const getData = async () => {
-      await fetch(require(`../../posts/site/${title}.md`)).then(response => {
-        response.text().then(text => {
-          setText(text);
-        });
-      });
+      setText(await Api.getSite(title));
     };
 
     getData();

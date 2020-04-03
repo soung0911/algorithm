@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Api } from '../../api';
 
 function Problem(props) {
   const {
@@ -12,13 +13,7 @@ function Problem(props) {
 
   useEffect(() => {
     const getData = async () => {
-      await fetch(
-        require(`../../posts/${path}/${title.replace(/(\s*)/g, '')}_p.md`)
-      ).then(response => {
-        response.text().then(text => {
-          setText(text);
-        });
-      });
+      setText(await Api.getProblem(path, title));
     };
 
     getData();
