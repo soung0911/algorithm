@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
           <GlobalStyles />
           <Header />
           <Sidebar />
