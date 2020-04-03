@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8181e9750de519786e4c8a6c048febfa",
+    "revision": "c477f85d3fb618ac97e44325097258f9",
     "url": "/algorithm/index.html"
   },
   {
@@ -16,16 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/algorithm/static/js/2.777e1004.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "027f035f08fbd88326a9",
-    "url": "/algorithm/static/js/main.2e7cb69b.chunk.js"
+    "revision": "b23879c8bf433501d1b0",
+    "url": "/algorithm/static/js/main.234d5b73.chunk.js"
   },
   {
     "revision": "c17802e3596408a0f674",
     "url": "/algorithm/static/js/runtime-main.d976465b.js"
-  },
-  {
-    "revision": "89e9c999001c1dc78495764253af3ff9",
-    "url": "/algorithm/static/media/2_p.89e9c999.md"
   },
   {
     "revision": "dc740c29e5d7ed167e0c1626e6c0cb2d",
@@ -50,5 +46,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1db10886b1593e05fd85d4d51e81dbbc",
     "url": "/algorithm/static/media/완주하지못한선수_p.1db10886.md"
+  },
+  {
+    "revision": "e6877ff74ac1cb5eceefb6ff2c9de30e",
+    "url": "/algorithm/static/media/종이접기_p.e6877ff7.md"
   }
 ]);
