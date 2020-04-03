@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link, withRouter } from 'react-router-dom';
+import styled, { css } from 'styled-components';
 import TreeItem from './TreeItem';
 
 const List = styled.div`
@@ -9,10 +9,51 @@ const List = styled.div`
   padding: 0;
 `;
 
-const SLink = styled(Link)`
+const Item = styled.div`
+  ${props =>
+    props.current
+      ? ``
+      : css`
+          & :hover {
+            background-color: #e6ecf1;
+          }
+        `}
+`;
+
+const ItemText = styled.span`
+  flex: 1;
+`;
+
+const ItemLink = styled(Link)`
   border: 1px solid transparent;
   display: flex;
   padding: 7px 24px 7px 16px;
+  ${props =>
+    props.current
+      ? css`
+          background-color: white;
+          color: rgb(56, 132, 255);
+        `
+      : css`
+          background-color: transparent;
+        `}
+`;
+
+const Arrow = styled.span`
+  cursor: pointer;
+  margin: -8px;
+  display: block;
+  padding: 8px;
+  position: relative;
+  font-size: 18px;
+  line-height: 1;
+  margin-left: 0;
+  ${props =>
+    props.toggle
+      ? css`
+          transform: rotateZ(90deg);
+        `
+      : css``}
 `;
 
 const ItemList = styled.div`
@@ -20,21 +61,41 @@ const ItemList = styled.div`
   display: ${props => (props.toggle ? 'block' : 'none')};
 `;
 
-function Tree({ list }) {
+function Tree({ list, location: { pathname } }) {
   const [toggle, setToggle] = useState(false);
 
   const toggleHandler = e => {
+    e.preventDefault();
     setToggle(!toggle);
   };
 
+  const path = list.path === 'home' ? '/' : `/site/${list.path}`;
+
   return (
     <List>
-      <SLink
-        to={list.path === 'home' ? '/' : `/site/${list.path}`}
-        onClick={toggleHandler}
-      >
-        {list.title}
-      </SLink>
+      <Item current={pathname === path ? 1 : 0}>
+        <ItemLink to={path} current={pathname === path ? 1 : 0} replace>
+          <ItemText>{list.title}</ItemText>
+          <Arrow onClick={toggleHandler} toggle={toggle}>
+            <span>
+              <svg
+                height="1em"
+                width="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                stroke="currentColor"
+              >
+                <g>
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </g>
+              </svg>
+            </span>
+          </Arrow>
+        </ItemLink>
+      </Item>
       <ItemList toggle={toggle}>
         {list.item_list.length > 0 ? (
           <TreeItem site={list} toggle={toggle} />
@@ -44,4 +105,4 @@ function Tree({ list }) {
   );
 }
 
-export default Tree;
+export default withRouter(Tree);

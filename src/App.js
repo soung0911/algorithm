@@ -8,9 +8,9 @@ class App extends Component {
       <>
         <HashRouter basename={process.env.PUBLIC_URL}>
           <GlobalStyles />
+          <Header />
           <Sidebar />
           <Content>
-            <Header />
             <Router />
           </Content>
         </HashRouter>

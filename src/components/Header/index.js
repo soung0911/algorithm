@@ -2,13 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  overflow: visible;
-  height: 50px;
-  padding: 0 8px;
-  z-index: 2;
-  font-size: 0.85em;
-  color: #7e888b;
-  background: 0 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2000;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+  position: fixed;
+  background-color: white;
 `;
 
 function Header() {
