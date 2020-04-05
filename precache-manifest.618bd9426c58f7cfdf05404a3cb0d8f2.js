@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b2cfefd0ca4889b0f4a4e71515c291e",
+    "revision": "bd93caf3a46d9a55f3adcb8439dd6070",
     "url": "/algorithm/index.html"
   },
   {
-    "revision": "14bf50ab12f310082fbe",
+    "revision": "615095859f33e602d34b",
     "url": "/algorithm/static/css/2.1bafa09e.chunk.css"
   },
   {
-    "revision": "14bf50ab12f310082fbe",
-    "url": "/algorithm/static/js/2.777e1004.chunk.js"
+    "revision": "615095859f33e602d34b",
+    "url": "/algorithm/static/js/2.c8d4c10e.chunk.js"
   },
   {
     "revision": "2225c84c946de3dbee439e7e753521ae",
-    "url": "/algorithm/static/js/2.777e1004.chunk.js.LICENSE.txt"
+    "url": "/algorithm/static/js/2.c8d4c10e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "87266e31fc474f1db1b9",
-    "url": "/algorithm/static/js/main.4c7553dc.chunk.js"
+    "revision": "8f569b4b19e6359163c0",
+    "url": "/algorithm/static/js/main.a7a617b8.chunk.js"
   },
   {
     "revision": "c17802e3596408a0f674",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/algorithm/static/media/baekjoon.8f282a5b.md"
   },
   {
-    "revision": "7a3ff043bd68640e1eaf8153d91dacc1",
-    "url": "/algorithm/static/media/home.7a3ff043.md"
+    "revision": "6e19600fb1523dbfa0314dc86f55c494",
+    "url": "/algorithm/static/media/introduction.6e19600f.md"
   },
   {
     "revision": "62306359c0c49b0fe9c68daeebce2c6e",
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/algorithm/static/media/완주하지못한선수_p.1db10886.md"
   },
   {
-    "revision": "79ce78d2f56aa64892cd11f3ad74289b",
-    "url": "/algorithm/static/media/종이접기_p.79ce78d2.md"
+    "revision": "22cd80c84dbfb20f8bb94d4e82b099a1",
+    "url": "/algorithm/static/media/종이접기_p.22cd80c8.md"
   }
 ]);
