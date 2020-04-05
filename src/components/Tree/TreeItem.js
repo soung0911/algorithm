@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 const Item = styled.div`
-  & :hover:not(.active) {
+  :hover {
     background-color: #e6ecf1;
   }
 `;
@@ -12,7 +12,7 @@ const ItemLink = styled(Link)`
   display: flex;
   padding: 7px 24px 7px 16px;
   border: 1px solid transparent;
-  ${props =>
+  ${(props) =>
     props.current
       ? css`
           background-color: white;
@@ -24,7 +24,9 @@ const ItemLink = styled(Link)`
       : css``}
 `;
 
-function TreeItem({ site, location: { pathname } }) {
+function TreeItem({ site }) {
+  const { pathname } = useLocation();
+
   return (
     <>
       {site.item_list.map((item, itemkey) => {
@@ -48,4 +50,4 @@ function TreeItem({ site, location: { pathname } }) {
   );
 }
 
-export default withRouter(TreeItem);
+export default TreeItem;

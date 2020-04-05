@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import TreeItem from './TreeItem';
 
@@ -10,11 +10,11 @@ const List = styled.div`
 `;
 
 const Item = styled.div`
-  ${props =>
+  ${(props) =>
     props.current
       ? ``
       : css`
-          & :hover {
+          :hover {
             background-color: #e6ecf1;
           }
         `}
@@ -28,7 +28,7 @@ const ItemLink = styled(Link)`
   border: 1px solid transparent;
   display: flex;
   padding: 7px 24px 7px 16px;
-  ${props =>
+  ${(props) =>
     props.current
       ? css`
           background-color: white;
@@ -48,7 +48,7 @@ const Arrow = styled.span`
   font-size: 18px;
   line-height: 1;
   margin-left: 0;
-  ${props =>
+  ${(props) =>
     props.toggle
       ? css`
           transform: rotateZ(90deg);
@@ -58,27 +58,28 @@ const Arrow = styled.span`
 
 const ItemList = styled.div`
   margin-left: 16px;
-  display: ${props => (props.toggle ? 'block' : 'none')};
+  display: ${(props) => (props.toggle ? 'block' : 'none')};
 `;
 
-function Tree({ list, location: { pathname } }) {
+function Tree({ list }) {
+  const { pathname } = useLocation();
   const [toggle, setToggle] = useState(false);
 
-  const toggleHandler = e => {
+  const toggleHandler = (e) => {
     e.preventDefault();
     setToggle(!toggle);
   };
 
-  const path = list.path === 'home' ? '/' : `/site/${list.path}`;
+  const path = list.path === 'introduction' ? '/' : `/site/${list.path}`;
 
-  const currentFlag = pathname === path ? 1 : 0;
+  const currentFlag = path === pathname ? 1 : 0;
 
   return (
     <List>
       <Item current={currentFlag}>
         <ItemLink to={path} current={currentFlag} replace>
           <ItemText>{list.title}</ItemText>
-          {path === '/' ? (
+          {path === '/' || list.item_list.length <= 0 ? (
             ''
           ) : (
             <Arrow onClick={toggleHandler} toggle={toggle}>
@@ -111,4 +112,4 @@ function Tree({ list, location: { pathname } }) {
   );
 }
 
-export default withRouter(Tree);
+export default Tree;

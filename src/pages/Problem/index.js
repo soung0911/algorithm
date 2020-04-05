@@ -1,28 +1,30 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import { Api } from '../../api';
+import { mdApi } from '../../api';
 
-function Problem(props) {
-  const {
-    match: {
-      params: { path, title }
-    }
-  } = props;
-
-  const [text, setText] = useState('');
+function Problem() {
+  const { path, title } = useParams();
+  const [data, setData] = useState({ error: false, text: '' });
 
   useEffect(() => {
     const getData = async () => {
-      setText(await Api.getProblem(path, title));
+      setData(await mdApi.getProblem(path, title));
     };
 
     getData();
-  }, [props]);
+  }, [path, title]);
 
   return (
-    <div className="markdown-body">
-      <ReactMarkdown source={text} />
-    </div>
+    <>
+      {data && !data.error ? (
+        <div className="markdown-body">
+          <ReactMarkdown source={data.text} />
+        </div>
+      ) : (
+        '문제를 찾지 못했습니다.'
+      )}
+    </>
   );
 }
 

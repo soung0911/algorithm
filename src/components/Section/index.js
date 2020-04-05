@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Section = styled.div`
+const Container = styled.div`
   margin-left: 20%;
   top: 60px;
   position: relative;
@@ -13,12 +13,12 @@ const Article = styled.div`
   padding: 20px 15px 40px;
 `;
 
-function Content({ children }) {
+function Section({ children }) {
   return (
-    <Section>
+    <Container>
       <Article>{children}</Article>
-    </Section>
+    </Container>
   );
 }
 
-export default Content;
+export default Section;

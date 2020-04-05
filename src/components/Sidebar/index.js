@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Tree } from 'components';
-import { sidebar } from 'data';
+import { dataApi } from '../../api';
 
 const Aside = styled.div`
   overflow-y: auto;
@@ -15,9 +15,19 @@ const Aside = styled.div`
 `;
 
 function Sidebar() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      setData(await dataApi.getAllData());
+    };
+
+    getData();
+  }, []);
+
   return (
     <Aside>
-      {sidebar.map((list, key) => {
+      {data.map((list, key) => {
         return <Tree key={key} list={list} />;
       })}
     </Aside>

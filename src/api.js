@@ -1,19 +1,30 @@
-const fetchApi = url =>
-  fetch(require(`./posts/${url}`))
-    .then(handleErrors)
-    .then(response => {
-      return response.text();
-    });
+import data from './data';
 
-const handleErrors = response => {
-  if (!response.ok) {
-    throw Error(response.statusText);
+const fetchApi = (url) => {
+  try {
+    return fetch(require(`./posts/${url}`))
+      .then((response) => response.text())
+      .then((text) => {
+        return {
+          error: false,
+          text: text,
+        };
+      });
+  } catch {
+    return {
+      error: true,
+      text: '',
+    };
   }
-  return response;
+};
+export const mdApi = {
+  getHome: () => fetchApi(`Introduction/introduction.md`),
+  getSite: (title) => fetchApi(`site/${title}.md`),
+  getProblem: (path, title) =>
+    fetchApi(`${path}/${title.replace(/(\s*)/g, '')}_p.md`),
 };
 
-export const Api = {
-  getSite: title => fetchApi(`site/${title}.md`),
-  getProblem: (path, title) =>
-    fetchApi(`${path}/${title.replace(/(\s*)/g, '')}_p.md`)
+export const dataApi = {
+  getAllData: () => data,
+  getSiteData: (site) => data.find((it) => it.title === site),
 };

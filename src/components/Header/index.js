@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -10,8 +11,27 @@ const Container = styled.div`
   background-color: white;
 `;
 
+const Title = styled.div`
+  width: 20%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  :hover {
+    color: rgb(56, 132, 255);
+    cursor: pointer;
+  }
+`;
+
 function Header() {
-  return <Container></Container>;
+  return (
+    <Container>
+      <Title>
+        <Link to={'/'}>Petros_K : Algorithm</Link>
+      </Title>
+    </Container>
+  );
 }
 
 export default Header;

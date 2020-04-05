@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter } from 'react-router-dom';
-import { GlobalStyles, Sidebar, Content, Header, Router } from 'components';
+import { GlobalStyles, Sidebar, Section, Header, Router } from 'components';
 
 class App extends Component {
   render() {
@@ -10,9 +10,9 @@ class App extends Component {
           <GlobalStyles />
           <Header />
           <Sidebar />
-          <Content>
+          <Section>
             <Router />
-          </Content>
+          </Section>
         </HashRouter>
       </>
     );
