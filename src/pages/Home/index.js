@@ -3,11 +3,11 @@ import ReactMarkdown from 'react-markdown';
 import { mdApi } from '../../api';
 
 function Home() {
-  const [text, setText] = useState('');
+  const [mdData, setMdData] = useState({ error: false, text: '' });
 
   useEffect(() => {
     const getData = async () => {
-      setText(await mdApi.getHome());
+      setMdData(await mdApi.getHome());
     };
 
     getData();
@@ -15,7 +15,7 @@ function Home() {
 
   return (
     <div className="markdown-body">
-      <ReactMarkdown source={text} />
+      <ReactMarkdown source={mdData.text} />
     </div>
   );
 }

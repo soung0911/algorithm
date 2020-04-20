@@ -13,15 +13,14 @@ const ItemLink = styled(Link)`
   padding: 7px 24px 7px 16px;
   border: 1px solid transparent;
   ${(props) =>
-    props.current
-      ? css`
-          background-color: white;
-          color: rgb(56, 132, 255);
-          border: 1px solid transparent;
-          border-color: #e6ecf1 !important;
-          border-right: 0;
-        `
-      : css``}
+    props.current &&
+    css`
+      background-color: white;
+      color: rgb(56, 132, 255);
+      border: 1px solid transparent;
+      border-color: #e6ecf1 !important;
+      border-right: 0;
+    `}
 `;
 
 function TreeItem({ site }) {
