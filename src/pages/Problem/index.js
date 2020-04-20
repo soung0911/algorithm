@@ -5,11 +5,11 @@ import { mdApi } from '../../api';
 
 function Problem() {
   const { path, title } = useParams();
-  const [data, setData] = useState({ error: false, text: '' });
+  const [mdData, setMdData] = useState({ error: false, text: '' });
 
   useEffect(() => {
     const getData = async () => {
-      setData(await mdApi.getProblem(path, title));
+      setMdData(await mdApi.getProblem(path, title));
     };
 
     getData();
@@ -17,9 +17,9 @@ function Problem() {
 
   return (
     <>
-      {data && !data.error ? (
+      {mdData && !mdData.error ? (
         <div className="markdown-body">
-          <ReactMarkdown source={data.text} />
+          <ReactMarkdown source={mdData.text} />
         </div>
       ) : (
         '문제를 찾지 못했습니다.'

@@ -14,28 +14,28 @@ const Grid = styled.div`
 
 function Site() {
   const { title } = useParams();
-  const [data, setData] = useState({ error: false, text: '' });
+  const [mdData, setMdData] = useState({ error: false, text: '' });
   const [siteData, setSiteData] = useState({});
 
   useEffect(() => {
-    const getSite = async () => {
-      setData(await mdApi.getSite(title));
+    const getData = async () => {
+      setMdData(await mdApi.getSite(title));
     };
 
     const getSiteData = async () => {
       setSiteData(await dataApi.getSiteData(title));
     };
 
-    getSite();
+    getData();
     getSiteData();
   }, [title]);
 
   return (
     <>
-      {data && !data.error ? (
+      {mdData && !mdData.error ? (
         <>
           <div className="markdown-body">
-            <ReactMarkdown source={data.text} />
+            <ReactMarkdown source={mdData.text} />
           </div>
           <Grid>
             <Card data={siteData} />

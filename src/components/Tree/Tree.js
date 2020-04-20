@@ -11,13 +11,12 @@ const List = styled.div`
 
 const Item = styled.div`
   ${(props) =>
-    props.current
-      ? ``
-      : css`
-          :hover {
-            background-color: #e6ecf1;
-          }
-        `}
+    !props.current &&
+    css`
+      :hover {
+        background-color: #e6ecf1;
+      }
+    `}
 `;
 
 const ItemText = styled.span`
@@ -28,15 +27,16 @@ const ItemLink = styled(Link)`
   border: 1px solid transparent;
   display: flex;
   padding: 7px 24px 7px 16px;
+  background-color: transparent;
   ${(props) =>
-    props.current
-      ? css`
-          background-color: white;
-          color: rgb(56, 132, 255);
-        `
-      : css`
-          background-color: transparent;
-        `}
+    props.current &&
+    css`
+      background-color: white;
+      color: rgb(56, 132, 255);
+      border: 1px solid transparent;
+      border-color: #e6ecf1 !important;
+      border-right: 0;
+    `}
 `;
 
 const Arrow = styled.span`
@@ -49,11 +49,10 @@ const Arrow = styled.span`
   line-height: 1;
   margin-left: 0;
   ${(props) =>
-    props.toggle
-      ? css`
-          transform: rotateZ(90deg);
-        `
-      : css``}
+    props.toggle &&
+    css`
+      transform: rotateZ(90deg);
+    `}
 `;
 
 const ItemList = styled.div`

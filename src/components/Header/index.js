@@ -28,7 +28,9 @@ function Header() {
   return (
     <Container>
       <Title>
-        <Link to={'/'}>Petros_K : Algorithm</Link>
+        <Link to={'/'} replace>
+          Petros_K : Algorithm
+        </Link>
       </Title>
     </Container>
   );
