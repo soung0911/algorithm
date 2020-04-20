@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5925a29ffdedd34ba297a57289c5160c",
+    "revision": "eda2cf43730ddf3ced0a7eb19cee205f",
     "url": "/algorithm/index.html"
   },
   {
-    "revision": "615095859f33e602d34b",
+    "revision": "e68b906668fc613b744e",
     "url": "/algorithm/static/css/2.1bafa09e.chunk.css"
   },
   {
-    "revision": "615095859f33e602d34b",
-    "url": "/algorithm/static/js/2.c8d4c10e.chunk.js"
+    "revision": "e68b906668fc613b744e",
+    "url": "/algorithm/static/js/2.9d5a7c53.chunk.js"
   },
   {
     "revision": "2225c84c946de3dbee439e7e753521ae",
-    "url": "/algorithm/static/js/2.c8d4c10e.chunk.js.LICENSE.txt"
+    "url": "/algorithm/static/js/2.9d5a7c53.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f569b4b19e6359163c0",
-    "url": "/algorithm/static/js/main.a7a617b8.chunk.js"
+    "revision": "16711552430d22e0de95",
+    "url": "/algorithm/static/js/main.b17019b3.chunk.js"
   },
   {
     "revision": "c17802e3596408a0f674",
@@ -50,5 +50,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "22cd80c84dbfb20f8bb94d4e82b099a1",
     "url": "/algorithm/static/media/종이접기_p.22cd80c8.md"
+  },
+  {
+    "revision": "6d9e560a8840ab46094fb7fb74e2c204",
+    "url": "/algorithm/static/media/크레인인형뽑기게임_p.6d9e560a.md"
   }
 ]);
