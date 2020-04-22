@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "edf75836315e9175ffb01d8f4c547c58",
+    "revision": "94b558b1ce1a039177658d433ad03744",
     "url": "/algorithm/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/algorithm/static/js/2.4fd18689.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4c752e021a1e8fd1fedf",
-    "url": "/algorithm/static/js/main.5ce8d505.chunk.js"
+    "revision": "03adce6035eae1d5b1ac",
+    "url": "/algorithm/static/js/main.9a78b675.chunk.js"
   },
   {
     "revision": "c17802e3596408a0f674",
@@ -56,11 +56,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/algorithm/static/media/완주하지못한선수_p.1db10886.md"
   },
   {
-    "revision": "22cd80c84dbfb20f8bb94d4e82b099a1",
-    "url": "/algorithm/static/media/종이접기_p.22cd80c8.md"
+    "revision": "6949aa49b6f6a170cf0d10a72639f267",
+    "url": "/algorithm/static/media/종이접기_p.6949aa49.md"
   },
   {
-    "revision": "79a0e9f8b916f8149b7d9bcea1883696",
-    "url": "/algorithm/static/media/크레인인형뽑기게임_p.79a0e9f8.md"
+    "revision": "d9f89173102295e30861f263e3d93c3c",
+    "url": "/algorithm/static/media/크레인인형뽑기게임_p.d9f89173.md"
   }
 ]);
