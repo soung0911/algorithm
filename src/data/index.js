@@ -9,6 +9,7 @@ export default [
       { title: '크레인 인형뽑기 게임' },
       { title: '모의고사' },
       { title: '가운데 글자 가져오기' },
+      { title: 'K번째수' },
     ],
   },
   {
