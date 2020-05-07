@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2544ab9e26116ef6eb22f305fbb512bd",
+    "revision": "1fae49a074a501b8517afd62c9027c1c",
     "url": "/algorithm/index.html"
   },
   {
-    "revision": "642dc479e0d65c39b771",
+    "revision": "bba030ecb69106222e2a",
     "url": "/algorithm/static/css/2.1bafa09e.chunk.css"
   },
   {
-    "revision": "642dc479e0d65c39b771",
-    "url": "/algorithm/static/js/2.858d8fc0.chunk.js"
+    "revision": "bba030ecb69106222e2a",
+    "url": "/algorithm/static/js/2.cb505e0b.chunk.js"
   },
   {
     "revision": "2225c84c946de3dbee439e7e753521ae",
-    "url": "/algorithm/static/js/2.858d8fc0.chunk.js.LICENSE.txt"
+    "url": "/algorithm/static/js/2.cb505e0b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "36bc78dd4691deb71354",
-    "url": "/algorithm/static/js/main.cda95ddd.chunk.js"
+    "revision": "43483bce77e4b764b182",
+    "url": "/algorithm/static/js/main.6784b5d1.chunk.js"
   },
   {
     "revision": "c17802e3596408a0f674",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5a4f96c6f9283bf81ccadd66d06c2b2e",
     "url": "/algorithm/static/media/가운데글자가져오기_p.5a4f96c6.md"
+  },
+  {
+    "revision": "7e85cd95361999bf6a67cb6b22404240",
+    "url": "/algorithm/static/media/같은숫자는싫어_p.7e85cd95.md"
   },
   {
     "revision": "05710e39ebbb3d1ee63eea5f4ca1278e",
