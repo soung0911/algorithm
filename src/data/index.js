@@ -10,6 +10,7 @@ export default [
       { title: '모의고사' },
       { title: '가운데 글자 가져오기' },
       { title: 'K번째수' },
+      { title: '같은 숫자는 싫어' },
     ],
   },
   {

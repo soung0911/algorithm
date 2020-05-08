@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import { CodeBlock } from 'components';
 import { mdApi } from '../../api';
 
 function Problem() {
@@ -19,7 +20,7 @@ function Problem() {
     <>
       {mdData && !mdData.error ? (
         <div className="markdown-body">
-          <ReactMarkdown source={mdData.text} />
+          <ReactMarkdown source={mdData.text} renderers={{ code: CodeBlock }} />
         </div>
       ) : (
         '문제를 찾지 못했습니다.'
