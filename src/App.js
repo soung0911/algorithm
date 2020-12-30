@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyles, Sidebar, Section, Header, Router } from 'components';
 
 class App extends Component {
@@ -17,14 +17,14 @@ class App extends Component {
   render() {
     return (
       <>
-        <HashRouter>
+        <BrowserRouter basename='/algorithm'>
           <GlobalStyles />
           <Header open={this.state.open} setOpen={this.setOpen} />
           <Sidebar open={this.state.open} />
           <Section>
             <Router />
           </Section>
-        </HashRouter>
+        </BrowserRouter>
       </>
     );
   }
