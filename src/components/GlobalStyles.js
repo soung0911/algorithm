@@ -10,14 +10,13 @@ export default createGlobalStyle`
 		color:inherit;
 	}
 	* {
-		box-sizing:border-box;
 	}
 
 	body {
 		text-rendering: optimizeLegibility;
-    font-family: helvetica neue,Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    letter-spacing: .2px;
+		font-family: helvetica neue,Helvetica,Arial,sans-serif;
+		font-size: 14px;
+		letter-spacing: .2px;
 		height: 100%;
 	}
 `;
