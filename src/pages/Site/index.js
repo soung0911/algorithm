@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
-import Card from 'components/Card';
+import { Card } from 'components';
 import { mdApi, dataApi } from '../../api';
 
 const Grid = styled.div`
