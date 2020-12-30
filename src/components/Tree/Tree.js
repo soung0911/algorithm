@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import TreeItem from './TreeItem';
+import { TreeItem } from 'components';
 
 const List = styled.div`
   margin: 0;

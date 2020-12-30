@@ -20,6 +20,7 @@
     "react-router-dom": "^5.1.2",
     "react-router-sitemap": "^1.2.0",
     "react-scripts": "3.4.0",
+    "react-syntax-highlighter": "^12.2.1",
     "styled-components": "^5.0.1",
     "styled-normalize": "^8.0.7"
   },
