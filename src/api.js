@@ -10,13 +10,14 @@ const fetchApi = (url) => {
           text: text,
         };
       });
-  } catch {
+  } catch (e) {
     return {
       error: true,
       text: '',
     };
   }
 };
+
 export const mdApi = {
   getHome: () => fetchApi(`Introduction/introduction.md`),
   getSite: (title) => fetchApi(`site/${title}.md`),
@@ -28,3 +29,11 @@ export const dataApi = {
   getAllData: () => data,
   getSiteData: (site) => data.find((it) => it.title === site),
 };
+
+export const sitemapApi = {
+  getSites: () => data.map((it)=> it.path),
+  getItems: (site) => {
+    const a = data.find((it)=> it.path === site);
+    return a.item_list.map((item)=> item.title)
+  }
+}
