@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Allow: /
+Disallow:
 Sitemap: https://soung0911.github.io/algorithm/sitemap.xml
